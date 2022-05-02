@@ -1,0 +1,209 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90vw;
+  height: 80vh;
+}
+
+.bar {
+  background-color: rgb(230, 230, 230);
+  width: 100%;
+  height: 22px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar_column:first-child {
+  width: 20%;
+  display: flex;
+}
+
+.bar_column:nth-child(2) {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar_column:last-child {
+  width: 20%;
+  display: flex;
+}
+
+.bar_column:first-child {
+  margin-left: 10px;
+}
+.bar_round {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: 0 2px;
+}
+
+.bar_round:first-child {
+  background-color: rgb(238, 105, 94);
+}
+
+.bar_round:nth-child(2) {
+  background-color: rgb(245, 189, 79);
+}
+
+.bar_round:last-child {
+  background-color: rgb(97, 193, 83);
+}
+
+.bar_search {
+  width: 400px;
+  height: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.bar_search p {
+  font-size: 3px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.main {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    'black purple speakers artists'
+    'red white speakers artists'
+    'red yellow speakers artists';
+}
+
+.box_black {
+  background-color: black;
+  grid-area: black;
+}
+
+.black_text,
+.black_text_date {
+  color: white;
+  font-size: 1.65vw;
+  line-height: 0.8em;
+  margin: 0.7vw 0 0 0.7vw;
+}
+
+.black_text:nth-child(odd) {
+  transform: scaleY(-1);
+}
+
+.box_purple {
+  background-color: rgb(62, 0, 194);
+  grid-area: purple;
+}
+
+.purple_text {
+  color: white;
+  font-size: 1.65vw;
+  line-height: 1.3em;
+  margin: 0.7vw 0 0 0.7vw;
+}
+
+.box_red {
+  background-color: rgb(255, 0, 0);
+  grid-area: red;
+}
+
+.red_text h3 {
+  font-size: 1.65vw;
+  line-height: 1em;
+  margin: 0.7vw 0 0 0.7vw;
+}
+
+.box_white {
+  grid-area: white;
+}
+
+.white_text {
+  font-size: 1.65vw;
+  line-height: 1.3em;
+  margin: 0.7vw 0 0 0.7vw;
+  text-decoration: underline;
+}
+
+.box_yellow {
+  background-color: rgb(255, 193, 23);
+  grid-area: yellow;
+}
+
+.yellow_text {
+  font-size: 1.65vw;
+  line-height: 1.3em;
+  margin: 0.7vw 0 0 0.7vw;
+}
+
+.header {
+  font-size: 1vw;
+  margin: 10px 0 10px 1vw;
+}
+
+.box_speakers {
+  grid-area: speakers;
+}
+
+.content {
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.box_speakers li {
+  font-size: 1.2vw;
+  line-height: 1em;
+  margin: 0.7vw 0 0 1vw;
+}
+
+.box_artists li {
+  font-size: 1.2vw;
+  line-height: 1em;
+  margin: 0.7vw 0 0 1vw;
+}
+
+span:hover {
+  background-color: rgb(84, 255, 255);
+  padding: 2px 5px 2px 5px;
+  transition: 0.15s ease-in-out;
+  text-decoration: underline;
+}
+
+.box_artists span:hover {
+  background-color: rgb(158, 255, 84);
+  padding: 2px 5px 2px 5px;
+  transition: 0.15s ease-in-out;
+  text-decoration: underline;
+}
+
+.box_artists {
+  grid-area: artists;
+}
+
+.top {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: rgb(255, 0, 132);
+}
